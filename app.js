@@ -17,7 +17,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/dashboard/*', (req, res) => res.sendFile(path.join(__dirname, 'public/dashboard/index.html')));
-app.get('/bubblechart/*', (req, res) => res.sendFile(path.join(__dirname, 'public/bubblechart/index.html')));
+app.get('/bubblechart/*', (req, res) => res.sendFile(path.join(__dirname, 'public/dashboard/bubblechart/index.html')));
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
