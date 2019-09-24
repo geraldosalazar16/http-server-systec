@@ -16,6 +16,8 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+require('dotenv').config();
+
 app.get('/dashboard/*', (req, res) => res.sendFile(path.join(__dirname, 'public/dashboard/index.html')));
 app.get('/bubblechart/*', (req, res) => res.sendFile(path.join(__dirname, 'public/bubblechart/index.html')));
 app.get('/excel/*', (req, res) => res.sendFile(path.join(__dirname, 'public/excel/index.html')));
