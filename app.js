@@ -21,6 +21,7 @@ require('dotenv').config();
 app.get('/dashboard/*', (req, res) => res.sendFile(path.join(__dirname, 'public/dashboard/index.html')));
 app.get('/bubblechart/*', (req, res) => res.sendFile(path.join(__dirname, 'public/bubblechart/index.html')));
 app.get('/excel/*', (req, res) => res.sendFile(path.join(__dirname, 'public/excel/index.html')));
+app.get('/backoffice/*', (req, res) => res.sendFile(path.join(__dirname, 'public/backoffice/index.html')));
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
